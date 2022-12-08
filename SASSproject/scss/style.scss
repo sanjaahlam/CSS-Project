@@ -1,0 +1,428 @@
+@import './mixins.scss';
+@import './color.scss';
+@import './fonts.scss';
+* {
+    box-sizing: border-box;
+  }
+ 
+  body {
+    @include wiMar (100%,0);
+    min-width: 320px;
+  }
+  header {
+    font-family: "Roboto-Regular";
+  }
+  .logo {
+    @include flexCenter(column,center,center);
+    background-image: url('../assets/images/banner3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 200px;
+  }
+  .logo div {
+    color: $color-white;
+    font-size: 20px;
+    margin: 20px 20px;
+  }
+  .logo button {
+   @include button();
+  }
+  header h1 {
+    text-align: center;
+    color: $logo-border;
+    font-family: "Roboto-Bold";
+  }
+  header span {
+    color: $color-orange;
+    border: 4px solid $logo-border;
+    border-right: none;
+    padding-left: 10px;
+  }
+  ul {
+    padding: 0;
+  }
+  nav li {
+    background-color:$nav-color;
+  @include wiMar(95%,0 auto);
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    font-family: "Roboto-Bold";
+    text-transform: uppercase;
+  }
+  nav ul li a {
+    color: $color-white;
+    text-align: center;
+    text-decoration: none;
+  }
+  /* END-HEADER */
+  main h2 {
+    text-align: center;
+    font-family: "Roboto-Bold";
+  }
+  .line-square-line {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .line {
+    display: inline-block;
+    height: 20px;
+    width: 40px;
+    border-top: 2px solid $color-black;
+  }
+  
+  .square {
+    @include square();
+    display: inline-block;
+    top: -9px;
+  }
+  .people {
+    @include wiMar(85%,0 auto 60px auto);
+  }
+  h4 {
+    @include marPad(10 0px,15px);
+    color:$button-background;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Roboto-Bold";
+  }
+  .list h4 {
+    margin-top: 10px;
+  }
+  .list ul {
+    list-style-image: url("./assets/images/arrow_bullet.png");
+    padding-left: 20px;
+    color: $logo-border;
+    font-family: "Roboto-Regular";
+    font-weight: bold;
+  }
+  .list li {
+    margin: 20px 0px;
+  }
+  .list p {
+    margin-bottom: 25px;
+    font-family:  "Roboto-Regular";
+  }
+  img {
+    width: 100%;
+  }
+  /* END PEOPLE */
+  /* WHAT PEOPLE SAYS */
+  .whatpeoplesays {
+   @include WhatPeopleSays();
+    font-family: "Roboto-Regular";
+  }
+  .williamson {
+    display: flex;
+    flex-direction: column;
+  }
+  .whatpeoplesays article img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid 2px $color-black;
+    padding: 3px;
+  }
+  .will-img {
+    display: flex;
+    flex-direction: row;
+  }
+  .will-img p {
+    @include flexCenter( column, center,left);
+    margin: 0px 10px;
+    color: $color-black;
+    font-family: "Roboto-Bold";
+  }
+  .williamson,
+  .j-lo,
+  .s-gomez {
+    background-color:$button-background;
+    color: $color-white;
+    @include marPad(10px, 20px 20px 5px 20px);
+  }
+  .line-height {
+    line-height: 1.5;
+  }
+  .line-height p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  /* END WHAT PEOPLE SAYS */
+  /* GET IN TOUCH*/
+  .getintouch h4 {
+    color:$color-black;
+    font-size: x-large;
+  }
+  /* DIV CONTACT */
+  .contact {
+    @include flexCenter (column,center,center);
+    background-color: $contact-green;
+    color: $color-white;
+    font-family: "Roboto-Regular";
+  }
+  .contact h4 {
+    color: $color-white;
+    font-family: "Roboto-Regular";
+    font-weight: normal;
+  }
+  .contact img {
+    width: 30px;
+    margin-right: 5px;
+  }
+  .contact div {
+    @include dispFlex($flex, $row);
+    margin-bottom: 5px;
+  }
+  
+  /* DIV CONNECT */
+  .connect img {
+    @include wiMar (30px,20px 10px);
+  }
+  .connect {
+    background-color:$connect-red;
+    @include flexCenter (column ,center,center)
+  }
+  .connect h4 {
+    color: $color-white;
+    margin: 0px;
+    margin-top: 15px;
+    font-family: "Roboto-Regular";
+    font-weight: normal;
+  }
+  /* DIV ADDRESS */
+  .address {
+    background-color:$address-blue;
+    display: flex;
+    color: $color-white;
+    text-align: center;
+  }
+  .address h4 {
+    color: $color-white;
+    margin: 0px;
+    padding: 15px;
+    font-family: 'Roboto-Regular';
+    font-weight: normal;
+    
+  }
+  .address p {
+    margin: 0px 15px;
+    padding: 20px;
+    
+    
+  }
+  /* DIV HOUSE */
+  .house {
+    background-color: rgb(166, 191, 215);
+  }
+  .house img {
+    padding: 20px 40px;
+    height: 250px;
+  }
+  iframe {
+    height: 300px;
+  }
+  /* END GET IN TOUCH */
+  /* FORM*/
+  .form {
+    @include wiMar (90%,0 auto);
+  }
+  .form h4 {
+    color:$color-black;
+    font-family: "Roboto-Regular";
+  }
+  .form input {
+    @include wiMar (100px,5px 0);
+    padding: 10px;
+  }
+  .form textarea {
+    width: 100%;
+    padding: 10px;
+  }
+  #sub {
+    color:$color-white;
+    background-color:$color-orange;
+    width: 15%;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    padding: 7px;
+  }
+  /* END FORM */
+  /* FOOTER */
+  footer {
+  @include flexCenter (column,center,center);
+    font-family: Roboto-Regular;
+    background-color:$color-black;
+    color: $color-white;
+    text-align: center;
+    padding: 20px 5px;
+    padding-top: 25px;
+    font-size: small;
+    margin-top: 20px;
+  }
+  footer a {
+    color: $color-white;
+    text-decoration: none;
+    margin: 10px 5px;
+    font-size: small;
+  }
+  /* FOR MOBILE */
+  @media screen and (min-width: 420px) {
+    header{
+      @include dispFlex($flex, $column);
+    }
+    .nav{
+      order: -1;
+    }
+    .logo{
+      height: 300px;
+    }
+  
+    .stars i{
+      color:$color-white;   
+    }
+    .divs {
+      height: auto;
+      @include dispFlex ($flex,$wraprow);
+    }
+    .flex{
+      flex-basis: 50%;
+    }
+    .address {
+     @include flexCenter(column,center,center);
+    }
+  }
+  /* FOR TABLET */
+  @media screen and (min-width: 768px) {
+    header {
+      position: relative;
+      @include dispFlex($flex, $row);
+    }
+  .logo div {
+      font-size: xx-large;
+  }
+    .nav {
+      width: 100%;
+      position: absolute;
+     @include flexCenter(row,space-between,center)
+    }
+    nav ul {
+      margin-right: 10px;
+    }
+    .nav h1 {
+      margin-left: 10px;
+    }
+    nav li {
+      display: inline;
+      margin: 0px;
+      background: none;
+    }
+    .logo {
+      width: 100%;
+      height: 500px;
+    }
+    .newflex {
+      @include dispFlex($flex, $wraprow);
+    }
+    .divs {
+      height: auto;
+      @include dispFlex($flex, $wraprow);
+    }
+    .flex {
+      flex-basis: 50%;
+    }
+    .contact img {
+      height: 40px;
+    }
+    /* .address {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    } */
+    .connect img {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+    .connect div {
+      margin-top: 30px;
+    }
+    .house img {
+      padding: 0;
+    }
+    iframe {
+      height: 350px;
+    }
+    .list {
+      flex-basis: 50%;
+    }
+    .change-p {
+      flex-basis: 100%;
+    }
+    .list h4 {
+      text-align: left;
+    }
+    .who-img {
+      flex-basis: 50%;
+    }
+    .what-pic {
+      @include dispFlex($flex,$wraprow);
+      justify-content: space-between;
+    }
+    .what-pic article {
+      flex-basis: 49%;
+    }
+    #name,
+    #email,
+    #tel {
+      width: 32%;
+    }
+    .change-input {
+      @include dispFlex($flex,$row);
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  }
+  /* FOR DESKTOP */
+  @media screen and (min-width: 1200px) {
+    .logo {
+      height: 700px;
+    }
+    .who-img {
+      width: 100%;
+      
+    }
+    .change-p,
+    .list,
+    .who-img {
+      flex-basis: 32%;
+    }
+    .newflex {
+    @include wiMar (80%,0 auto);
+      justify-content: space-between;
+    }
+    .list li {
+      margin: 10px 0;
+    }
+    .what-pic article {
+      flex-basis: 32%;
+      flex-grow: 1;
+      margin: 5px;
+      padding-bottom: 20px;
+    }
+    .what-pic {
+      justify-content: space-between;
+    }
+    .divs {
+      flex-flow: nowrap;
+    }
+    .form {
+      width: 70%;
+    }
+    .line {
+      width: 12%;
+  }
+  }

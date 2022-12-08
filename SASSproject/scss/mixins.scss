@@ -1,0 +1,42 @@
+ @mixin dispFlex($dis,$flex){
+    display:$dis;
+    flex-flow: $flex;
+  }
+ @mixin WhatPeopleSays(){
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+ }
+@mixin square(){
+    min-width: 20px;
+    min-height:20px;
+    border: 2px solid $color-black;
+    transform:rotate(45deg);
+    margin: 0 5px;
+}
+@mixin button(){
+    border:none;
+    color: $color-white;
+    background-color: $button-background;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-width: 0;
+    margin-top: 20px;
+   font-size: 14;
+  }
+  @mixin marPad($marg,$pad){
+    margin-bottom: $marg;
+    padding: $pad;
+  }
+  @mixin flexCenter($direction, $position1, $position2) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $position1;
+    align-items: $position2;
+}
+@mixin wiMar($wid,$mar){
+    width:$wid;
+    margin:$mar;
+}
