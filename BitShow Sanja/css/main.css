@@ -1,0 +1,36 @@
+#navbar {
+  background-color: #343a40; }
+
+.navbar-brand {
+  color: white; }
+
+.suggestions {
+  position: absolute;
+  color: black;
+  border: 2px lightgray solid;
+  background-color: white;
+  width: 198px;
+  padding: 10px;
+  display: none;
+  cursor: pointer; }
+
+.select-suggestion {
+  border-bottom: 2px lightgray solid; }
+
+.title {
+  color: #343a40; }
+
+.showTitle {
+  color: #1483ff; }
+
+body {
+  margin-bottom: 40px; }
+
+.hidden-results {
+  display: none; }
+
+.footer {
+  background-color: #343a40;
+  color: white; }
+
+/*# sourceMappingURL=main.css.map */
